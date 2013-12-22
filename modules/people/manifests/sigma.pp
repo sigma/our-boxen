@@ -10,13 +10,13 @@ class people::sigma {
   include slate
 
   include python
-  include ruby
-  include rbenv
-
-  include zsh
   include tmux
+  include zsh
 
   include vmware_fusion
+  include vlc
+
+  include iterm2::stable
   
   $home     = "/Users/${::boxen_user}"
   $projects = "${home}/Projects/git"
@@ -29,5 +29,9 @@ class people::sigma {
   repository { $dotfiles:
     source  => 'sigma/dotfiles',
     require => File[$projects]
+  }
+
+  package {
+    ['zile']:
   }
 }
