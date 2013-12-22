@@ -32,6 +32,35 @@ class people::sigma {
   }
 
   package {
-    ['zile']:
+    [
+     'autossh',
+     'avrdude',
+     'ccache',
+     'cmake',
+     'dar',
+     'fortune',
+     'gnutls',
+     'keychain',
+     'lftp',
+     'moreutils',
+     'mr',
+     'openssl',
+     'par2',
+     'pyenv',
+     'rbenv',
+     'rbenv-bundler',
+     'repo',
+     'ruby',
+     'ruby-build',
+     'ruby-install',
+     'socat',
+     'sshuttle',
+     'tig',
+     'unrar',
+     'vcsh',
+     'weechat',
+     'wget',
+     'zile',
+     ]:
   }
 }
