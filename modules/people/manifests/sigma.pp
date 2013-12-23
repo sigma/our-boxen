@@ -37,7 +37,6 @@ class people::sigma {
      'avrdude',
      'ccache',
      'cmake',
-     'dar',
      'fortune',
      'gnutls',
      'keychain',
