@@ -19,17 +19,22 @@ class people::sigma {
   include iterm2::stable
   
   $home     = "/Users/${::boxen_user}"
-  $projects = "${home}/Projects/git"
-  $dotfiles = "${projects}/dotfiles"
+  $projects = "${home}/Projects"
+  $projects_git = "${projects}/git"
+  $dotfiles = "${projects_git}/dotfiles"
 
   file { $projects:
+    ensure => directory
+  }
+
+  file { $projects_git:
     ensure  => directory,
-    recurse => true
+    require => File[$projects]
   }
 
   repository { $dotfiles:
     source  => 'sigma/dotfiles',
-    require => File[$projects]
+    require => File[$projects_git]
   }
 
   package {
