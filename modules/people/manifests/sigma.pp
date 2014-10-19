@@ -23,7 +23,8 @@ class people::sigma {
   $dotfiles = "${projects}/dotfiles"
 
   file { $projects:
-    ensure  => directory
+    ensure  => directory,
+    recurse => true
   }
 
   repository { $dotfiles:
