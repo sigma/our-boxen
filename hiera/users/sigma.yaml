@@ -1,0 +1,3 @@
+---
+boxen::config::homebrewdir: "/usr/local"
+homebrew::config::installdir: "/usr/local"
